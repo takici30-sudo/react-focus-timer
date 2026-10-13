@@ -42,8 +42,8 @@ export default function App() {
     if (running) {
       const seconds = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
       if (seconds === 0 && finishedDeadline.current !== deadline) {
-import  useEffect useRef useState  from 'react'
-  if (mode === 'focus') setCompleted(count => count + 1);
+        finishedDeadline.current = deadline;
+        if (mode === 'focus') setCompleted(count => count + 1);
         setAnnouncement('Session complete.');
       } else {
         setAnnouncement('Paused. Take your time.');
